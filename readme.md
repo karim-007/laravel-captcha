@@ -36,21 +36,16 @@ For  video tutorial click the image bellow or https://youtu.be/9egTxTg6dkw
 
 ## Using Laravel Captcha
 
-Showing a Captcha in a View:
+Add this in your blade file
 ```html
 ...
 @captcha
-<input type="text" id="captcha" name="captcha">
+<input type="text" id="captcha" required name="captcha">
  ...
 ```
-Check user input during form submission:
+For validation add this in your controller
 ```php
 <?php
-
-namespace App\Http\Controllers;
-
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class CaptchaController extends Controller
 {
@@ -64,7 +59,7 @@ class CaptchaController extends Controller
     }
 }
 ```
-### Configuration
+### for publishing your config file named captcha.php
 ```bash
 php artisan vendor:publish --provider="Karim007\LaravelCaptcha\CaptchaServiceProvider" --tag="config"
 ```
@@ -237,23 +232,25 @@ Supported languages:
 * Chinese
 * Dutch
 * English
-* French
-* German
-* Hindi
-* Italian
 * Japanese
 * Korean
-* Persian
-* Portuguese
-* Russian
+* French
+* German
 * Spanish
 * Turkish
 * Ukrainian
+* Hindi
+* Italian
+* Persian
+* Portuguese
+* Russian
+
+Publish lang info
 ```bash
 php artisan vendor:publish --provider="Karim007\LaravelCaptcha\CaptchaServiceProvider" --tag="lang"
 ```
 
-### View
+publish views files
 ```bash
 php artisan vendor:publish --provider="Karim007\LaravelCaptcha\CaptchaServiceProvider" --tag="views"
 ```
