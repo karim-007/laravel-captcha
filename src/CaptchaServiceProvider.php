@@ -20,7 +20,7 @@ class CaptchaServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/./config/captcha.php', 'captcha');
         $this->loadViewsFrom(__DIR__ . '/./resources/views', 'captcha');
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'captcha');
+        $this->loadTranslationsFrom(__DIR__ . '/./resources/lang', 'captcha');
 
         $this->publishes([__DIR__ . '/./config' => config_path()], 'config');
         $this->publishes([__DIR__ . '/./resources/lang' => resource_path('lang')], 'lang');

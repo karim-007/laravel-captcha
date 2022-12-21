@@ -258,7 +258,7 @@ Contributions to the Captcha package you are welcome. Please note the following 
 request.
 
 - Follow [PSR-4](http://www.php-fig.org/psr/psr-4/) coding standards.
-- 
+
 ## License
 
 This repository is licensed under the [MIT License](http://opensource.org/licenses/MIT).
