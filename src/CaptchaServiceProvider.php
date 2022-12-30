@@ -25,7 +25,6 @@ class CaptchaServiceProvider extends ServiceProvider
         $this->publishes([__DIR__ . '/./config' => config_path()], 'config');
         $this->publishes([__DIR__ . '/./resources/lang' => resource_path('lang')], 'lang');
         $this->publishes([__DIR__ . '/./resources/views' => resource_path('views')], 'views');
-
         $this->registerRoutes();
         $this->registerBladeDirectives();
         $this->registerValidator();
